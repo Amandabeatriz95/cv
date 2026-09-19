@@ -1,173 +1,201 @@
 <!DOCTYPE html>
-<!-- @falvojr: Reference article https://www.w3schools.com/howto/howto_website_create_resume.asp -->
-<!-- @falvojr: Useful link to use fontawesome (fa) icons: https://fontawesome.com/v4/icons/ -->
 <html lang="pt-BR">
 
   <head>
-    <title>Amanda Beatriz</title>
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Amanda Beatriz das Chagas Paulo | Currículo</title>
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
-      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+      html,body,h1,h2,h3,h4,h5,h6 { font-family: "Roboto", sans-serif; }
+
+      /* ===== PÁGINA CENTRALIZADA E RESPONSIVA ===== */
+
+      /* A página fica no centro da tela, com largura máxima de 1100px */
+      .pagina {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+
+      /* Celular: uma coluna só (perfil em cima, conteúdo embaixo) */
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+      }
+
+      /* Coluna da direita: os cartões ficam empilhados com espaço entre eles */
+      .coluna-direita {
+        display: grid;
+        gap: 16px;
+      }
+
+      /* Tela grande: duas colunas (perfil de 320px + conteúdo) */
+      @media (min-width: 800px) {
+        .layout {
+          grid-template-columns: 320px minmax(0, 1fr);
+          align-items: start;
+        }
+      }
+
+      /* E-mail e links longos quebram linha em vez de estourar o cartão */
+      .contato p { overflow-wrap: anywhere; }
+      .contato a { color: inherit; }
+
+      /* Etiquetas das habilidades */
+      .tags .w3-tag { margin: 0 6px 8px 0; }
     </style>
-    
+
   </head>
 
-  <body class="w3-light-grey" cz-shortcut-listen="true">
-  
-    <!-- Page Container -->
-    <div class="w3-content w3-margin-top" style="max-width:1400px;">
-  
-      <!-- The Grid -->
-      <div class="w3-row-padding">
-  
-        <!-- Left Column -->
-        <div class="w3-third">
-  
-          <div class="w3-white w3-text-grey w3-card-4">
-            <!-- @falvojr: This container has been modified to not use a profile picture. -->
-            <div class="w3-container">
-              <h2>Amanda Beatriz</h2>
-            </div>
-            <div class="w3-container">
-              <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-indigo"></i>Estudante Full-Stack</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-indigo"></i>Peruibe-SP, Brasil</p>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-indigo"></i>Amanda.chagas_paulo@hotmail.com</p>
-              <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-indigo"></i>(11)9.5393-5188</p>
-              <hr>
-  
-              <p class="w3-large">
-                <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-indigo"></i>Skills</b>
-              </p>
-              <p>JavaScript</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:100%">100%</div>
-              </div>
-              <p>Android</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:80%">80%</div>
-              </div>
-              <p>Koltin</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:70%">70%</div>
-              </div>
-              <p>Spring Framework</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:70%">70%</div>
-              </div>
-              <br>
-  
-              <p class="w3-large w3-text-theme">
-                <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-indigo"></i>Idiomas</b>
-              </p>
-              <p>Português</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-indigo" style="height:24px;width:100%"></div>
-              </div>
-              <p>Inglês</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-indigo" style="height:24px;width:60%"></div>
-              </div>
-              <p>Espanhol</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-round-xlarge w3-indigo" style="height:24px;width:25%"></div>
-              </div>
-              <br>
-            </div>
-          </div><br>
-  
-          <!-- End Left Column -->
-        </div>
-  
-        <!-- Right Column -->
-        <div class="w3-twothird">
-    
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-terminal fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Sobre</h2>
-            <p>Doutorando na Universidade de São Paulo (USP), onde contribui junto ao Instituto de Ciências Matemáticas e de Computação (ICMC), campus de São Carlos. Possui 12 anos de experiência na área de desenvolvimento de software, com ênfase na análise, construção e arquitetura de sistemas Web e Mobile. Além disso, é certificado nas plataformas .NET (Microsoft), Java (Oracle) e Android (Google). Atualmente é Líder Técnico no time de Educação da DIO, onde é responsável por orquestrar os conteúdos educacionais da plataforma.</p>
+  <body class="w3-light-grey">
+
+    <!-- Container da página (centralizado) -->
+    <div class="pagina">
+
+      <div class="layout">
+
+        <!-- ===== Coluna da esquerda: perfil ===== -->
+        <div class="w3-white w3-text-grey w3-card-4">
+
+          <div class="w3-container">
+            <h2 class="w3-xlarge">Amanda Beatriz das Chagas Paulo</h2>
           </div>
 
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Experiências
-            </h2>
-            <div class="w3-container">
-              <h5 class="w3-opacity"><b>Digital Innovation One (DIO)</b></h5>
-              <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Março 2021 - <span class="w3-tag w3-indigo w3-round">Atual</span></h6>
-              <p>Planejar o roadmap dos conteúdos educacionais da plataforma, tendo em vista as principais tendências de mercado e necessidades das empresas parceiras. Além de garantir que as experiências de aprendizagem tenham total sinergia com a nossa metodologia educacional.</p>
+          <div class="w3-container contato">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-indigo"></i>Estudante Full-Stack</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-indigo"></i>Peruíbe, SP, Brasil</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-indigo"></i><a href="mailto:amanda.chagas_paulo@hotmail.com">amanda.chagas_paulo@hotmail.com</a></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-indigo"></i><a href="tel:+5511953935188">(11) 9.5393-5188</a></p>
+            <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-indigo"></i><a href="https://www.linkedin.com/in/amanda-beatriz-49367917a/" target="_blank" rel="noopener">LinkedIn</a></p>
+            <hr>
+
+            <p class="w3-large">
+              <b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-indigo"></i>Habilidades</b>
+            </p>
+
+            <p><b>Tecnologia</b></p>
+            <div class="tags">
+              <span class="w3-tag w3-indigo w3-round">JavaScript</span>
+              <span class="w3-tag w3-indigo w3-round">HTML</span>
+              <span class="w3-tag w3-indigo w3-round">CSS</span>
+              <span class="w3-tag w3-indigo w3-round">Lógica de programação</span>
+              <span class="w3-tag w3-indigo w3-round">Scrum</span>
             </div>
+
+            <p><b>Comportamentais</b></p>
+            <div class="tags">
+              <span class="w3-tag w3-indigo w3-round">Comunicação</span>
+              <span class="w3-tag w3-indigo w3-round">Resolução de problemas</span>
+              <span class="w3-tag w3-indigo w3-round">Atendimento ao cliente</span>
+              <span class="w3-tag w3-indigo w3-round">Orientação para resultados</span>
+            </div>
+            <br>
+
+            <p class="w3-large">
+              <b><i class="fa fa-globe fa-fw w3-margin-right w3-text-indigo"></i>Idiomas</b>
+            </p>
+            <p>Português</p>
+            <br>
           </div>
-  
+        </div>
+        <!-- Fim da coluna da esquerda -->
+
+        <!-- ===== Coluna da direita: conteúdo ===== -->
+        <div class="coluna-direita">
+
+          <!-- Resumo profissional -->
+          <div class="w3-container w3-card w3-white">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Resumo profissional</h2>
+            <p>Profissional em transição de carreira para a área de Tecnologia da Informação, buscando a primeira oportunidade como desenvolvedora ou em funções tecnológicas. Possui sólida trajetória corporativa em atendimento hospitalar de alta complexidade e gestão administrativa na Rede D'Or e Hospital Samaritano – Rede Américas, unindo forte comunicação a uma formação robusta que inclui Pós-Graduação em Cloud Computing, Gestão de TI e Pedagogia. Atualmente aprofunda conhecimentos em desenvolvimento Fullstack (JavaScript, HTML, CSS) e metodologias ágeis (Scrum), aliando facilidade com lógica de programação, resolução de problemas e forte orientação para resultados e clientes.</p>
+          </div>
+
+          <!-- Experiência profissional -->
           <div class="w3-container w3-card w3-white">
             <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Educação
+              <i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Experiência profissional
             </h2>
+
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>Digital Innovation One (DIO)</b></h5>
-              <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Março 2021 - <span class="w3-tag w3-indigo w3-round">Atual</span></h6>
-              <p>
-                Maior plataforma de educação aberta em TI da América Latina, com mais 1 milhão de usuários. 
-                A DIO possui parcerias com algumas das empresas mais inovadoras do mundo, proporcionando experiências 
-                de ensino imersivas e com foco em empregabilidade. Nesse contexto, seguem meus principais certificados:
-              </p>
+              <h5 class="w3-opacity"><b>Hospital Samaritano</b> | São Paulo, SP</h5>
+              <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Outubro de 2020 - <span class="w3-tag w3-indigo w3-round">Presente</span></h6>
+              <p><b>Assistente de Atendimento</b></p>
               <ul>
-                <li><a href="https://www.dio.me/certificate/762101D2" target="_blank">Formação: Programação Reativa com Spring WebFlux (36h)</a></li>
-                <li><a href="https://www.dio.me/certificate/07041B99" target="_blank">Curso: Desenvolvimento Mobile Nativo Para Android (1h)</a></li>
-                <li><a href="https://www.dio.me/certificate/F12AC30B" target="_blank">Curso: Componentes, Layouts e UI/UX Em Apps Android (3h)</a></li>
-                <li><a href="https://www.dio.me/certificate/3FB20BF1" target="_blank">Curso: Java e Kotlin Juntos!? Construindo Apps Android (3h)</a></li>
+                <li>Atuação em atendimento receptivo de alta criticidade, gerenciando chamadas internas e externas para suporte hospitalar com agilidade, empatia e assertividade.</li>
+                <li>Resolução rápida de conflitos e demandas urgentes sob pressão, garantindo eficiência operacional e cumprimento rigoroso de protocolos.</li>
+                <li>Gestão de fluxos de comunicação e suporte a múltiplos departamentos, demonstrando forte capacidade de adaptação e resolução de problemas.</li>
               </ul>
               <hr>
             </div>
+
             <div class="w3-container">
-              <h5 class="w3-opacity"><b>Universidade de São Paulo (USP)</b></h5>
-              <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dezembro 2018 - Agosto 2023</h6>
-              <p>Doutorando em Engenharia de Computação com foco em acessibildiade de conteúdos educacionais.</p>
+              <h5 class="w3-opacity"><b>Rede D'Or</b> | São Paulo, SP</h5>
+              <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2019 - 2020</h6>
+              <p><b>Assistente Administrativo – Centro Médico</b></p>
+              <ul>
+                <li>Suporte às rotinas administrativas do centro médico, organização de fluxos operacionais e controle rigoroso de dados e informações.</li>
+                <li>Otimização de processos internos e suporte direto à equipe, garantindo precisão nos registros e melhoria contínua no atendimento.</li>
+              </ul>
             </div>
           </div>
 
-          <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <!-- Formação acadêmica e técnica -->
+          <div class="w3-container w3-card w3-white">
             <h2 class="w3-text-grey w3-padding-16">
-              <i class="fa fa-git fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Projetos
+              <i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Formação acadêmica e técnica
             </h2>
+
             <div class="w3-container">
-              <h6 class="w3-text-indigo">
-                <i class="fa fa-github fa-fw w3-margin-right"></i>
-                <a href="https://github.com/falvojr/copa-2022-android" target="_blank">falvojr/copa-2022-android</a>
-              </h6>
-              <p>App Android Nativo utilizando a arquitetura MVVM com Kotlin e diversas features do Android Jetpack.</p>
+              <ul>
+                <li>Pós-Graduação em Cloud Computing</li>
+                <li>Graduação em Gestão de Tecnologia da Informação</li>
+                <li>Graduação em Pedagogia</li>
+              </ul>
               <hr>
             </div>
+
             <div class="w3-container">
-              <h6 class="w3-text-indigo">
-                <i class="fa fa-gitlab fa-fw w3-margin-right"></i>
-                <a href="https://gitlab.com/denilsonbonatti/kubernetes-projeto2-dio" target="_blank">denilsonbonatti/kubernetes-projeto2-dio</a>
-              </h6>
-              <p>Repositório no GitLab com um pipeline configurado em Kubernetes.</p>
+              <h5 class="w3-opacity"><b>Formação Fullstack</b></h5>
+              <h6 class="w3-text-indigo"><span class="w3-tag w3-indigo w3-round">Em andamento</span></h6>
+              <p>Foco em lógica de programação, JavaScript, HTML, CSS, estruturas condicionais, manipulação de arrays e desenvolvimento prático.</p>
             </div>
           </div>
-  
-          <!-- End Right Column -->
+
+          <!-- Cursos e qualificações complementares -->
+          <div class="w3-container w3-card w3-white">
+            <h2 class="w3-text-grey w3-padding-16">
+              <i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Cursos e qualificações complementares
+            </h2>
+            <div class="w3-container">
+              <ul>
+                <li>Metodologia Scrum (fundamentos e aplicação em projetos)</li>
+                <li>Atendimento ao Cliente de Excelência</li>
+                <li>Técnicas de Vendas e Prospecção de Clientes</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
-  
-        <!-- End Grid -->
+        <!-- Fim da coluna da direita -->
+
       </div>
-  
-      <!-- End Page Container -->
+      <!-- Fim do layout -->
+
     </div>
-  
-    <footer class="w3-container w3-indigo w3-center w3-margin-top">
-      <p>Minhas Redes Sociais</p>
-      <a href="https://github.com/falvojr" target="_blank"><i class="fa fa-github w3-hover-opacity"></i></a>
-      <a href="https://www.linkedin.com/in/falvojr" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    <!-- Fim do container da página -->
+
+    <footer class="w3-container w3-indigo w3-center">
+      <p>Minhas redes sociais</p>
+      <a href="https://www.linkedin.com/in/amanda-beatriz-49367917a/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin w3-xxlarge w3-hover-opacity"></i></a>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" rel="noopener">w3.css</a></p>
     </footer>
-  
+
   </body>
 
 </html>
